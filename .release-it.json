@@ -1,0 +1,91 @@
+{
+	"git": {
+		"commit": true,
+		"commitMessage": "chore: release v${version}",
+		"tag": true,
+		"tagName": "v${version}"
+	},
+	"npm": {
+		"publish": false
+	},
+	"github": {
+		"release": true,
+		"releaseName": "v${version}",
+		"tokenRef": "GITHUB_TOKEN"
+	},
+	"plugins": {
+		"@release-it/conventional-changelog": {
+			"infile": "CHANGELOG.md",
+			"header": "# Changelog",
+			"preset": {
+				"name": "conventionalcommits",
+				"types": [
+					{
+						"type": "feat",
+						"section": "✨ Features"
+					},
+					{
+						"type": "fix",
+						"section": "🐛 Bug Fixes"
+					},
+					{
+						"type": "docs",
+						"section": "📚 Documentation"
+					},
+					{
+						"type": "style",
+						"section": "🎨 Styles"
+					},
+					{
+						"type": "refactor",
+						"section": ":recycle: Code Refactoring"
+					},
+					{
+						"type": "perf",
+						"section": "🚀 Performance Improvements"
+					},
+					{
+						"type": "test",
+						"section": "🚨 Tests"
+					},
+					{
+						"type": "build",
+						"section": "🛠 Builds"
+					},
+					{
+						"type": "ci",
+						"section": "⚙️ Continuous Integrations"
+					},
+					{
+						"type": "chore",
+						"section": "* Chores"
+					},
+					{
+						"type": "revert",
+						"section": "⏪ Reverts"
+					},
+					{
+						"type": "deprecate",
+						"section": "☠️ Deprecated"
+					},
+					{
+						"type": "security",
+						"section": "🔐 Security"
+					},
+					{
+						"type": "remove",
+						"section": "🗑️ Security"
+					},
+					{
+						"type": "upgrade",
+						"section": "⬆️ Packages Upgrades"
+					},
+					{
+						"type": "wip",
+						"section": "🚧 Work In Progress"
+					}
+				]
+			}
+		}
+	}
+}

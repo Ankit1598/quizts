@@ -1,18 +1,16 @@
-import './globals.css'
+import "app/globals.css"
+import { PropsWithChildren } from "react"
+import "react-toastify/dist/ReactToastify.css"
+import RootLayoutClient from "./layout.client"
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
-  return (
-    <html lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
-      <head />
-      <body>{children}</body>
-    </html>
-  )
+const RootLayout = ({ children }: PropsWithChildren) => {
+	return (
+		<html lang="en">
+			<body>
+				<RootLayoutClient>{children}</RootLayoutClient>
+			</body>
+		</html>
+	)
 }
+
+export default RootLayout
